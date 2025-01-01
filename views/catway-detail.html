@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Détails du Catway</h2>
+    <p id="catwayDetails"></p>
+    <h3>Mettre à jour</h3>
+    <form id="updateCatway">
+        <div class="form-group">
+            <label for="catwayNumber">Catway numéro :</label>
+            <input type="number" id="catwayNumber" name="catwayNumber" required>
+        </div>
+        <div class="form-group">
+            <label for="type">Type</label>
+            <select name="type" id="type">
+                <option value="short">Short</option>
+                <option value="long">Long</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="catwayState">État: </label>
+            <select name="catwayState" id="catwayState">
+                <option value=true>Libre</option>
+                <option value=false>Occupé</option>
+            </select>
+        </div>
+        <button type="submit">Mettre à jour</button>
+    </form>
+    <h3>Supprimer le catway</h3>
+    <form id="deleteCatway">
+    <button type="submit">Supprimer</button>
+    </form>
+    <script type="module" src="/scripts/oneCatway.js"></script>
+</body>
+</html>

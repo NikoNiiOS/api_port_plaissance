@@ -1,0 +1,27 @@
+body {
+    background-color:rgb(252, 238, 212);
+}
+
+fieldset {
+    margin:25px;
+}
+
+form {
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3, a {
+    margin-left: 25px
+}
+
+h3 {
+    padding-top: 20px;
+}
+
+legend {
+    font-weight: bold;
+}

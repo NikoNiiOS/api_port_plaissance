@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <h1>Bienvenue sur votre tableau de bord</h1>
+    <h3>Gestion des catways</h3>
+    <a href="/views/catways.html">Voir les catways</a>
+    <fieldset>
+        <legend>Ajouter un catway</legend>
+        <form id="createCatway">
+            <div class="form-group">
+                <label for="catwayNumber">Catway numéro :</label>
+                <input type="number" id="catwayNumberAdd" name="catwayNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="type">Type :</label>
+                <select name="type" id="typeAdd">
+                    <option value="short">Short</option>
+                    <option value="long">Long</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="catwayState">État :</label>
+                <select name="catwayState" id="catwayStateAdd">
+                    <option value=true>Libre</option>
+                    <option value=false>Occupé</option>
+                </select>
+            </div>
+            <button type="submit">Ajouter</button>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Mettre à jour un catway</legend>
+        <form id="updateCatway">
+            <div class="form-group">
+                <label for="catwayNumber">Catway numéro :</label>
+                <input type="number" id="catwayNumberUpdate" name="catwayNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="type">Type</label>
+                <select name="type" id="type">
+                    <option value="short">Short</option>
+                    <option value="long">Long</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="catwayState">État: </label>
+                <select name="catwayState" id="catwayState">
+                    <option value=true>Libre</option>
+                    <option value=false>Occupé</option>
+                </select>
+            </div>
+            <button type="submit">Mettre à jour</button>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Supprimer un catway</legend>
+        <form id="deleteCatway">
+            <div class="form-group">
+                <label for="catwayNumber">Catway numéro :</label>
+                <input type="number" id="catwayNumber" name="catwayNumber" required>
+            </div>
+            <button type="submit">Supprimer</button>
+        </form>
+    </fieldset>
+    <h3>Gestion des utilisateurs</h3>
+    <a href="/views/users.html">Voir les utilisateurs</a>
+    <fieldset>
+        <legend>Ajouter un utilisateur</legend>
+        <form id="createUser">
+            <div class="form-group">
+                <label for="name">Nom: </label>
+                <input type="text" id="nameAdd" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email: </label>
+                <input type="email" id="emailAdd" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe: </label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Ajouter</button>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Mettre à jour un utilisateur</legend>
+        <form id="updateUser">
+            <input type="hidden" id="userId" name="userId">
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" id="nameUpdate" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Mail :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit">Mettre à jour</button>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Supprimer un utilisateur</legend>
+        <form id="deleteUser">
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <button type="submit">Supprimer</button>
+        </form>
+    </fieldset>
+    <h3>Gestion des réservations</h3>
+    <a href="/views/reservations.html">Voir les réservations</a>
+    <fieldset>
+        <legend>Ajouter une réservation</legend>
+        <form id="createReservation">
+            <div class="form-group">
+                <label for="catwayNumber">Numéro du catway: </label>
+                <select name="catwayNumber" id="catwayNumberSelect"></select>
+            </div>
+            <div class="form-group">
+                <label for="clientName">Nom du client: </label>
+                <select name="clientName" id="clientNameSelect"></select>
+            </div>
+            <div class="form-group">
+                <label for="boatName">Nom du bateau: </label>
+                <input type="text" id="boatName" name="boatName" required>
+            </div>
+            <div class="form-group">
+                <label for="checkInDate">Date d'arrivée: </label>
+                <input type="date" id="checkInDate" name="checkInDate" required>
+            </div>
+            <div class="form-group">
+                <label for="checkOutDate">Date d'arrivée: </label>
+                <input type="date" id="checkOutDate" name="checkOutDate" required>
+            </div>
+            <button type="submit">Ajouter</button>
+        </form>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Supprimer une réservation</legend>
+        <form id="deleteReservation">
+            <div class="form-group">
+                <label for="number">Numéro de la réservation :</label>
+                <input type="text" id="number" name="number" required>
+            </div>
+            <button type="submit">Supprimer</button>
+        </form>
+    </fieldset>
+    
+    <script type="module" src="../scripts/dashboard.js"></script>
+</body>
+
+</html>

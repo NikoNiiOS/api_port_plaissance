@@ -18,8 +18,11 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
+    "mockjs": "^1.1.0",
     "mongoose": "^8.9.3",
     "morgan": "^1.10.0",
+    "sinon": "^19.0.2",
+    "sinon-mongoose": "^2.3.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   },
