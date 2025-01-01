@@ -43,7 +43,9 @@ const options = {
   apis: ["./routes/*.js"],
 };
 
-const swaggerSpec = swaggerJsdoc(options)
+const swaggerSpec = swaggerJsdoc(options);
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
